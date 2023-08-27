@@ -10,6 +10,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   impuesto=funciones.Impuesto_Estado(estado_item.value);
   div.innerHTML = "<p>" + "Cantidad: " + cantidad_items.value + "<br> Precio: " + precio_item.value +
-  "<br>"+"Estado: "+"<b>"+estado_item.value + "</b>"+"  Impuesto: "+ impuesto+ "%"+"</p>" 
+  "<br>"+"Estado: "+"<b>"+estado_item.value + "</b>"+"  Impuesto: "+ impuesto+ "%"+
+  "<br> Precio Neto: "+ funciones.Calcular_precio_Neto(cantidad_items.value,precio_item.value)+"</p>" 
   
 });
