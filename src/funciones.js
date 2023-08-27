@@ -12,10 +12,14 @@ function Impuesto_Estado(estado) {
       impuesto = 4.00;
     return impuesto;
   }
+
   function Calcular_precio_Neto(cantidad,precio){
     return cantidad*precio;
+  }
+  function Calcular_precio_Total(precioNeto,estado){
 
+    return (precioNeto*funciones.Impuesto_Estado(estado)/100)+precioNeto;
   }
   
-  const funciones={Impuesto_Estado,Calcular_precio_Neto};
+  const funciones={Impuesto_Estado,Calcular_precio_Neto,Calcular_precio_Total};
   export default funciones;
