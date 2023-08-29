@@ -5,6 +5,10 @@ const precio_item = document.querySelector("#precio-item")
 const form = document.querySelector("#tot-form");
 const div = document.querySelector("#resultado-div");
 const estado_item = document.querySelector("#estado-item")
+var impuesto=Float64Array;
+var precioNeto=Float32Array;
+var precioTotal=Float32Array;
+var Descuento=Float32Array;
 
 
 funciones.Calcular_precio_Neto(cantidad_items.value,precio_item.value);
