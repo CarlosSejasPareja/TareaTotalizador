@@ -10,6 +10,7 @@ const estado_item = document.querySelector("#estado-item")
 funciones.Calcular_precio_Neto(cantidad_items.value,precio_item.value);
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  var precioFinal=Float32Array;
   impuesto=funciones.Impuesto_Estado(estado_item.value);
   precioNeto=funciones.Calcular_precio_Neto(cantidad_items.value,precio_item.value);
   precioTotal=funciones.Calcular_precio_Total(precioNeto,estado_item.value);
@@ -20,6 +21,6 @@ form.addEventListener("submit", (event) => {
   "<br> Precio Neto: "+ precioNeto +
   "<br> Impuesto para "+"<b>"+estado_item.value + "</b>"+" = "+ impuesto+ "%"+
   "<br> Descuento: "+Descuento+"%"+
-  "<br> Precio Total: " +precioTotal+" "+precioFinal+"</p>" 
+  "<br> Precio Total: " +precioFinal+"</p>" 
   
 });
